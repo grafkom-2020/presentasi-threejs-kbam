@@ -119,19 +119,19 @@ function init() {
         -1.0,  1.0, -1.0,
         -1.0,  1.0,  1.0,
 
-        // belakang
+        // bawah
         -1.0, -1.0, -1.0,
+         1.0, -1.0,  1.0,
         -1.0, -1.0,  1.0,
-         1.0, -1.0,  1.0,
 
-         1.0, -1.0,  1.0,
-         1.0, -1.0, -1.0,
         -1.0, -1.0, -1.0,
-        
+         1.0, -1.0, -1.0,
+         1.0, -1.0,  1.0
     ] );
     bufferGeometry.addAttribute('position', new THREE.BufferAttribute(vertices, 3));
 
     mesh.push(new THREE.Mesh( geometry, new THREE.MeshBasicMaterial({color: 0x00FF00})));
+    
     mesh.push(new THREE.Mesh( bufferGeometry, new THREE.MeshBasicMaterial({color: 0xFFFF00})));
     scene.add(mesh[0]);
     scene.add(mesh[1]);
